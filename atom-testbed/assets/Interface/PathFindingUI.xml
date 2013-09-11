@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    <screen id="start" controller="sg.atom.ai.test.TestAStar3D">
+        <layer childLayout="horizontal">
+            <panel childLayout="vertical" align="center" valign="center" width="20%" height="50%" backgroundColor="#55a5" padding="10">
+                <control id="RadioGroup-1" name="radioButtonGroup" />
+                <control name="label" text="Radio Buttons" />
+                <panel childLayout="vertical" backgroundColor="#8001" paddingLeft="7px" paddingRight="7px" paddingTop="4px" paddingBottom="4px" width="105px">
+                    <effect>
+                        <onActive name="border" color="#0008" />
+                    </effect>
+                    <panel childLayout="horizontal">
+                        <control name="label" text="Option 1" with="60px" />
+                        <control name="radioButton" id="option-1" group="RadioGroup-1" />
+                    </panel>
+                    <panel childLayout="horizontal">
+                        <control name="label" text="Option 2" with="60px" />
+                        <control name="radioButton" id="option-2" group="RadioGroup-1" />
+                    </panel>
+                    <panel childLayout="horizontal">
+                        <control name="label" text="Option 3" with="60px" />
+                        <control name="radioButton" id="option-3" group="RadioGroup-1" />
+                    </panel>
+                    <panel childLayout="horizontal">
+                        <control name="label" text="Option 4" with="60px" />
+                        <control name="radioButton" id="option-4" group="RadioGroup-1" />
+                    </panel>
+                </panel>
+                <panel childLayout="vertical" backgroundColor="#8001" paddingLeft="7px" paddingRight="7px" paddingTop="4px" paddingBottom="4px" width="105px">
+                    <control name="button" id="btnGo" label="Go">                        
+                        <interact onClick="clickGo()"/>    
+                    </control> />
+                    <control name="button" id="btnGo" label="Clear">
+                        <interact onClick="clickClear()"/>    
+                    </control> />
+                    <control name="button" id="btnGo" label="Start" >
+                        <interact onClick="clickStartPoint()"/>    
+                    </control> />
+                    <control name="button" id="btnGo" label="End">
+                        <interact onClick="clickFinishPoint()"/>    
+                    </control> />
+                    <control name="button" id="btnGo" label="Block">  
+                        <interact onClick="clickNormalPoint()"/>    
+                    </control> />                 
+                </panel>
+            </panel>
+        </layer>
+    </screen>
+</nifty>
