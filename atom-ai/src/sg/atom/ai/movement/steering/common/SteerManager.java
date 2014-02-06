@@ -38,10 +38,19 @@ public class SteerManager implements ISteerManager {
     SimpleApplication app;
     private Node rootNode;
     public Flock flock;
+    
     private ArrayList<DefaultVehicle> vehicles;
     private ArrayList<DefaultVehicle> obstacles;
     private ArrayList<DefaultVehicle> friends;
+    
+    /**
+     * Special vehicle represent the mouse
+     */ 
     public DefaultVehicle mouseVehicle;
+    
+    /** 
+     * Due to Spatial based vehicle, this Map exist
+     */
     private HashMap<DefaultVehicle, Spatial> steerVehicleToSpatialMap = new HashMap<DefaultVehicle, Spatial>();
     
     public SteerManager(SimpleApplication app) {
@@ -52,6 +61,14 @@ public class SteerManager implements ISteerManager {
         friends = new ArrayList<DefaultVehicle>();
     }
     
+    /**
+     * Create the simplest view for debug 
+     * @param v
+     * @param isStaticObstacle
+     * @param color
+     * @param controls
+     * @return 
+     */
     public SimpleVehicleSpatial createViewFor(DefaultVehicle v, boolean isStaticObstacle, ColorRGBA color, SimpleVehicleControl... controls) {
         SimpleVehicleSpatial vs = new SimpleVehicleSpatial(v, this, color);
         if (!isStaticObstacle) {
@@ -74,7 +91,7 @@ public class SteerManager implements ISteerManager {
         
     }
     
-    public void createObstacles(int amount) {
+    public void createRandomObstacles(int amount) {
         this.obstacleNode = new Node("Obstacles");
         for (int i = 0; i < amount; i++) {
             DefaultVehicle obstacle = new DefaultVehicle(this);
@@ -218,14 +235,7 @@ public class SteerManager implements ISteerManager {
         }
         return neighbours;
     }
-    
-    public AssetManager getAssetManager() {
-        return app.getAssetManager();
-    }
-    
-    public PhysicsSpace getPhysicsSpace() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+
     
     public void resetVehicles() {
         vehicles.clear();
@@ -260,5 +270,18 @@ public class SteerManager implements ISteerManager {
             this.flock.add(vehicle);
         }
         this.friendNode.attachChild(this.flock.getFlockNode());
+    }
+    
+    public Vector3f getMaxSteeringForce(){
+        return null;
+    }
+    
+    /* GETTER SETTER SHORTCUT*/
+    public AssetManager getAssetManager() {
+        return app.getAssetManager();
+    }
+    
+    public PhysicsSpace getPhysicsSpace() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

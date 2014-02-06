@@ -42,7 +42,7 @@ public class SimpleVehicleSpatial extends Node {
     Geometry f;
     static int count = 0;
 
-    SimpleVehicleSpatial(DefaultVehicle vehicle, SteerManager steerManager, ColorRGBA color) {
+    public SimpleVehicleSpatial(DefaultVehicle vehicle, SteerManager steerManager, ColorRGBA color) {
         super("Vehicle");
         this.vehicle = vehicle;
         this.color = color;
@@ -179,7 +179,7 @@ public class SimpleVehicleSpatial extends Node {
         setLocalTranslation(vehicle.location);
     }
 
-    void addSteerControl(SimpleVehicleControl steerControl) {
+    public void addSteerControl(SimpleVehicleControl steerControl) {
         addControl(steerControl);
         steerControl.setVehicle(vehicle);
     }

@@ -3,23 +3,21 @@ package sg.atom.ai.movement.steering.behaviour;
 import com.jme3.math.Vector3f;
 import java.util.List;
 import sg.atom.ai.movement.core.Obstacle;
+import sg.atom.ai.movement.steering.group.VehicleGroup;
 
 public class Cohesion
-        implements Behaviour {
+        implements GroupBehaviour {
 
     Vector3f velocity;
     List<Obstacle> neighbors;
+
     public Cohesion() {
     }
-    
+
     public Cohesion(Vector3f velocity, List<Obstacle> neighbors) {
         this.velocity = velocity;
         this.neighbors = neighbors;
     }
-
-
-
-
 
     public Vector3f calculateForce() {
         return calculateForce(velocity, neighbors);
@@ -46,6 +44,7 @@ public class Cohesion
 
         return cohesion.negate();
     }
+
     public Vector3f getVelocity() {
         return velocity;
     }
@@ -61,6 +60,8 @@ public class Cohesion
     public void setNeighbors(List<Obstacle> neighbors) {
         this.neighbors = neighbors;
     }
-    
 
+    public VehicleGroup getGroup() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

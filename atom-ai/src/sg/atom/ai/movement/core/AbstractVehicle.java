@@ -8,8 +8,10 @@ public abstract class AbstractVehicle {
 
     public Vector3f location = Vector3f.ZERO;
     public float speed;
+    
     public float maxSpeed;
     public float maxTurnForce;
+    
     public float mass;
     public float collisionRadius;
     public Vector3f velocity;
@@ -20,6 +22,7 @@ public abstract class AbstractVehicle {
         Vector3f steeringForce = truncate(steeringInfluence, this.maxTurnForce * scale);
         Vector3f acceleration = steeringForce.divide(this.mass);
         Vector3f vel = truncate(this.velocity.add(acceleration), this.maxSpeed);
+        
         this.velocity = vel;
         this.velocity.y = 0.0F;
         this.scale = scale;
