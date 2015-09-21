@@ -4,8 +4,8 @@
  */
 package sg.atom.ai.searching.pathfinding;
 
-import sg.atom.ai.searching.pathfinding.space.grid.GridCell;
-import sg.atom.ai.searching.pathfinding.space.grid.GridMap;
+import sg.atom.ai.framework.space.grid.GridCell;
+import sg.atom.ai.framework.space.grid.GridMap;
 
 /**
  *

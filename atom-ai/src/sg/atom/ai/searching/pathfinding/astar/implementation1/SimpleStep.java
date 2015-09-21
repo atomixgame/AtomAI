@@ -3,7 +3,7 @@
  */
 package sg.atom.ai.searching.pathfinding.astar.implementation1;
 
-import sg.atom.ai.searching.pathfinding.core.path.Step;
+import sg.atom.ai.searching.core.Step;
 
 /**
  * A single step within the path

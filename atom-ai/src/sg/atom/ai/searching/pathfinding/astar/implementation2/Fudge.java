@@ -4,7 +4,7 @@
  */
 package sg.atom.ai.searching.pathfinding.astar.implementation2;
 
-import sg.atom.ai.searching.pathfinding.space.grid.control.GridCellManager;
+import sg.atom.ai.framework.space.grid.control.GridCellManager;
 import java.awt.Point;
 
 /**

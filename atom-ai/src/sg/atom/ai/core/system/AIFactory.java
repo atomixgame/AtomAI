@@ -8,6 +8,8 @@ package sg.atom.ai.core.system;
 /**
  * AIFactory
  * Generate usable module with appropriate components, techs, level.
+ * 
+ * <p>Replaced with generic DI injector.
  * @author hungcuong
  */
 public class AIFactory {

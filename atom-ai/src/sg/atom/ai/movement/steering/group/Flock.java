@@ -5,7 +5,7 @@ import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
 import java.util.ArrayList;
 import java.util.HashMap;
-import jme3tools.navmesh.Path;
+import sg.atom.ai.searching.pathfinding.core.Path;
 import sg.atom.ai.movement.core.AbstractVehicle;
 import sg.atom.ai.movement.steering.common.SteerManager;
 

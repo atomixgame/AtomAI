@@ -12,7 +12,8 @@ import com.jme3.scene.Geometry;
 import com.jme3.scene.shape.Sphere;
 import java.util.ArrayList;
 import java.util.List;
-import jme3tools.navmesh.Path;
+import sg.atom.ai.searching.pathfinding.core.Path;
+import sg.atom.ai.searching.pathfinding.core.Waypoint;
 
 public class PathFollowerControl extends SimpleVehicleControl {
 
@@ -51,7 +52,7 @@ public class PathFollowerControl extends SimpleVehicleControl {
         Vector3f cohesionForce = this.cohesion.calculateForce(self.getWorldTranslation(), neighbors);
         Vector3f alignmentForce = this.alignment.calculateForce(self.velocity, neighbors);
         Vector3f momentumForce = self.velocity;
-        Vector3f persuitForce = this.persuit.calculateForce(self.getWorldTranslation(), self.velocity, self.speed, 0.0F, tpf, Vector3f.ZERO, ((Path.Waypoint) self.flock.getPath().getWaypoints().get(self.flock.lastPath)).getPosition());
+        Vector3f persuitForce = this.persuit.calculateForce(self.getWorldTranslation(), self.velocity, self.speed, 0.0F, tpf, Vector3f.ZERO, ((Waypoint) self.flock.getPath().getWaypoints().get(self.flock.lastPath)).getPosition());
 
         cohesionForce.multLocal(0.5F);
         alignmentForce.multLocal(0.5F);
@@ -70,7 +71,7 @@ public class PathFollowerControl extends SimpleVehicleControl {
         }
         this.minDistanceToWaypoint = (self.collisionRadius * 5.0F);
 
-        if (this.minDistanceToWaypoint >= ((Path.Waypoint) self.flock.getPath().getWaypoints().get(self.flock.lastPath)).getPosition().distance(self.getWorldTranslation())) {
+        if (this.minDistanceToWaypoint >= ((Waypoint) self.flock.getPath().getWaypoints().get(self.flock.lastPath)).getPosition().distance(self.getWorldTranslation())) {
             self.flock.lastPath += 1;
             if (self.flock.lastPath >= self.flock.getPath().getWaypoints().size()) {
                 this.arrived = true;

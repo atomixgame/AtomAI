@@ -2,8 +2,8 @@ package sg.atom.ai.searching.pathfinding.astar.implementation1;
 
 import java.util.ArrayList;
 
-import sg.atom.ai.searching.pathfinding.core.path.Path;
-import sg.atom.ai.searching.pathfinding.core.path.Step;
+import sg.atom.ai.searching.core.Path;
+import sg.atom.ai.searching.core.Step;
 
 
 /**

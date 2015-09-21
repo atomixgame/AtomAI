@@ -1,4 +1,4 @@
-package sg.atom.ai.character.human.groovy.chatbot
+package sg.atom.ai.character.human.chatbot.groovy
 
 import groovy.util.*
 import groovy.lang.*
@@ -11,7 +11,7 @@ public class ChatBot{
     Node currentNode;
     Node rootNode;
     
-    ChatBot(aScript){
+    public ChatBot(aScript){
         binding.setVariable("i", new Integer(2));
         /*
         aScript=shell.parse(new File(path+"builderTest2.groovy"));

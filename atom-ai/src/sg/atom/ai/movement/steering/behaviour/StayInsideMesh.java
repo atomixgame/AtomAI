@@ -1,8 +1,8 @@
 package sg.atom.ai.movement.steering.behaviour;
 
 import com.jme3.math.Vector3f;
-import jme3tools.navmesh.Cell;
-import jme3tools.navmesh.NavMesh;
+import sg.atom.ai.framework.space.Cell;
+import sg.atom.ai.framework.space.navmesh.NavMesh;
 
 public class StayInsideMesh implements Behaviour {
 

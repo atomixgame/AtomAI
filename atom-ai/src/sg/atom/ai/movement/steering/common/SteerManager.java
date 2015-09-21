@@ -16,7 +16,7 @@ import com.jme3.scene.Spatial;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import jme3tools.navmesh.Path;
+import sg.atom.ai.searching.pathfinding.core.Path;
 import sg.atom.ai.movement.steering.control.AvoidControl;
 import sg.atom.ai.movement.steering.control.FleeControl;
 import sg.atom.ai.movement.steering.control.PathFollowerControl;

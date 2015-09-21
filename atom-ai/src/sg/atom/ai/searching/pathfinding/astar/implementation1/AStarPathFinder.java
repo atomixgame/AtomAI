@@ -6,7 +6,7 @@ import sg.atom.ai.searching.pathfinding.core.algorithm.PathFinder;
 import sg.atom.ai.searching.pathfinding.core.heuristic.Heuristic;
 import sg.atom.ai.searching.pathfinding.core.node.PathfindingNode;
 import sg.atom.ai.searching.pathfinding.core.openlist.OpenList;
-import sg.atom.ai.searching.pathfinding.core.path.Path;
+import sg.atom.ai.searching.core.Path;
 import sg.atom.ai.searching.pathfinding.core.world.Mover;
 import sg.atom.ai.searching.pathfinding.core.world.WorldMap;
 

@@ -1,6 +1,6 @@
 package sg.atom.ai.searching.pathfinding.core.algorithm;
 
-import sg.atom.ai.searching.pathfinding.core.path.Path;
+import sg.atom.ai.searching.core.Path;
 import sg.atom.ai.searching.pathfinding.core.world.Mover;
 
 /**

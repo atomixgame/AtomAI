@@ -3,7 +3,7 @@ package sg.atom.ai.movement.steering.control;
 import sg.atom.ai.movement.steering.behaviour.StayInsideMesh;
 import sg.atom.ai.movement.core.AbstractVehicle;
 import com.jme3.math.Vector3f;
-import jme3tools.navmesh.NavMesh;
+import sg.atom.ai.framework.space.navmesh.NavMesh;
 import sg.atom.ai.movement.core.ISteerManager;
 
 public class StayInsideMeshControl extends SimpleVehicleControl {
